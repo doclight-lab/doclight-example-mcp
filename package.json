@@ -1,0 +1,25 @@
+{
+  "name": "doclight-example-mcp",
+  "version": "1.0.0",
+  "description": "Documentation Search MCP Server — Doclight instrumentation example",
+  "type": "module",
+  "scripts": {
+    "dev": "tsx watch src/server.ts",
+    "start": "tsx src/server.ts",
+    "typecheck": "tsc --noEmit",
+    "inspect": "npx @modelcontextprotocol/inspector tsx src/server.ts",
+    "link:sdk": "yalc add @doclight/core @doclight/node @doclight/mcp"
+  },
+  "dependencies": {
+    "@doclight/core": "file:.yalc/@doclight/core",
+    "@doclight/mcp": "file:.yalc/@doclight/mcp",
+    "@doclight/node": "file:.yalc/@doclight/node",
+    "@modelcontextprotocol/sdk": "^1.12.0",
+    "zod": "^3.25.0"
+  },
+  "devDependencies": {
+    "@types/node": "^25.9.3",
+    "tsx": "^4.19.0",
+    "typescript": "^5.7.0"
+  }
+}
