@@ -21,7 +21,24 @@ npm install
 npm run dev
 ```
 
-If you are developing against a local build of the SDK, run `npm run link:sdk` (requires [yalc](https://github.com/wclr/yalc)) before `npm install`.
+## Local development (before npm publish)
+
+If you are working against a local build of the SDK packages:
+
+```bash
+# Install yalc globally (one-time)
+npm install -g yalc
+
+# In the main doclight repo — build and publish packages to local yalc store:
+pnpm sdk:publish:local
+
+# In this repo — link and install:
+npm run link:sdk   # yalc add @doclight/core @doclight/node @doclight/mcp
+npm install
+npm run dev
+```
+
+Run `pnpm sdk:publish:local` again any time you change the SDK source.
 
 ## What gets tracked automatically
 
