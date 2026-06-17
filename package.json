@@ -8,7 +8,11 @@
     "start": "tsx src/server.ts",
     "typecheck": "tsc --noEmit",
     "inspect": "npx @modelcontextprotocol/inspector tsx src/server.ts",
-    "link:sdk": "yalc add @doclight/core @doclight/node @doclight/mcp"
+    "link:sdk": "yalc add @doclight/core @doclight/node @doclight/mcp",
+    "traffic": "node --env-file=.env ./node_modules/.bin/tsx scripts/traffic.ts",
+    "traffic:burst": "node --env-file=.env ./node_modules/.bin/tsx scripts/traffic.ts --burst 50",
+    "traffic:errors": "node --env-file=.env ./node_modules/.bin/tsx scripts/traffic.ts --scenario confused",
+    "traffic:fast": "node --env-file=.env ./node_modules/.bin/tsx scripts/traffic.ts --rps 2"
   },
   "dependencies": {
     "@doclight/core": "file:.yalc/@doclight/core",
